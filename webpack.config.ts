@@ -55,7 +55,7 @@ const CHANGELOG_PATH = path.resolve(__dirname, 'src/versionNotification.txt');
 
 export default function createConfig(
   _: any,
-  { mode = 'production' }: { mode: 'none' | 'development' | 'production' },
+  { mode = 'production'}: { mode: 'none' | 'development' | 'production' },
 ): Configuration {
   return {
     mode,
@@ -63,7 +63,8 @@ export default function createConfig(
     target: 'web',
 
     devServer: {
-      port: 1234,
+      // Prefer explicit PORT if provided; otherwise auto-pick a free port to avoid collisions
+      port: process.env.PORT ? Number(process.env.PORT) : 'auto',
       host: '0.0.0.0',
       allowedHosts: 'all',
       hot: false,

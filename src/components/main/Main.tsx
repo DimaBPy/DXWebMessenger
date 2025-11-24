@@ -94,11 +94,13 @@ import SafeLinkModal from './SafeLinkModal.async';
 import ConfettiContainer from './visualEffects/ConfettiContainer';
 import SnapEffectContainer from './visualEffects/SnapEffectContainer';
 import WaveContainer from './visualEffects/WaveContainer';
+import WelcomeDialog from './WelcomeDialog';
 
 import './Main.scss';
 
 export interface OwnProps {
   isMobile?: boolean;
+  isJustLoggedIn?: boolean;
 }
 
 type StateProps = {
@@ -203,6 +205,7 @@ const Main = ({
   isAccountFrozen,
   isAppConfigLoaded,
   isFoldersSidebarShown,
+  isJustLoggedIn,
 }: OwnProps & StateProps) => {
   const {
     initMain,
@@ -280,6 +283,14 @@ const Main = ({
 
   const containerRef = useRef<HTMLDivElement>();
   const leftColumnRef = useRef<HTMLDivElement>();
+
+  const [isWelcomeDialogOpen, setIsWelcomeDialogOpen] = useState(false);
+
+  useEffect(() => {
+    if (isJustLoggedIn) {
+      setIsWelcomeDialogOpen(true);
+    }
+  }, [isJustLoggedIn]);
 
   const { isDesktop } = useAppLayout();
   useEffect(() => {
@@ -608,6 +619,10 @@ const Main = ({
       <DeleteFolderDialog folder={deleteFolderDialog} />
       <ReactionPicker isOpen={isReactionPickerOpen} />
       <DeleteMessageModal isOpen={isDeleteMessageModalOpen} />
+      <WelcomeDialog
+        isOpen={isWelcomeDialogOpen}
+        onClose={() => setIsWelcomeDialogOpen(false)}
+      />
     </div>
   );
 };

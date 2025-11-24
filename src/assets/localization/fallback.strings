@@ -170,7 +170,7 @@
 "LoginPhonePlaceholder" = "Your phone number";
 "LoginNext" = "Next";
 "LoginQRLogin" = "Log in by QR Code";
-"LoginQRTitle" = "Log in to Telegram by QR Code";
+"LoginQRTitle" = "Log in to DiMaxWebMessenger by QR Code";
 "LoginQRHelp1" = "Open Telegram on your phone";
 "LoginQRHelp2" = "Go to **Settings** > **Devices** > **Link Desktop Device**";
 "LoginQRHelp3" = "Point your phone at this screen to confirm login";
@@ -413,13 +413,13 @@
 "TerminateOldSessionHeader" = "Automatically terminate old sessions";
 "IfInactiveFor" = "If inactive for";
 "AreYouSureSessions" = "Are you sure you want to terminate all other sessions?";
-"WebSessionsTitle" = "Logged In with Telegram";
+"WebSessionsTitle" = "Logged In with DiMaxWebMessenger";
 "AuthSessionsLogOut" = "Log Out";
 "AuthSessionsViewBrowser" = "Browser";
 "AuthSessionsViewLocationInfo" = "This location estimate is based on the IP address and may not always be accurate.";
 "AuthSessionsLogOutApplications" = "Disconnect All Websites";
 "AuthKeepSignedIn" = "Keep me signed in";
-"AuthTitle" = "Telegram";
+"AuthTitle" = "DiMaxWebMessenger";
 "ClearOtherWebSessionsHelp" = "You can log in on websites that support signing in with Telegram.";
 "AreYouSureWebSessions" = "Are you sure you want to disconnect all websites where you logged in with Telegram?";
 "AutodownloadSizeLimitUpTo" = "up to {limit}";
@@ -2398,3 +2398,6 @@
 "StealthModeButtonToStory" = "Enable and Open the Story";
 "StealthModeButtonRecharge" = "Available in {timer}";
 "StealthModeComposerPlaceholder" = "Stealth Mode active – {timer}";
+"WelcomeTitle" = "Welcome to DiMaxWebMessenger";
+"WelcomeText" = "We are glad to see you here! Enjoy the new experience.";
+"StartMessaging" = "Start Messaging";

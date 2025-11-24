@@ -449,6 +449,11 @@ addActionHandler('sendMessage', async (global, actions, payload): Promise<void> 
     ...suggestedMessage && { isInvertedMedia: suggestedMessage?.isInvertedMedia },
   };
 
+  // Add signature to outgoing messages
+  if (params.text) {
+    params.text = params.text + '\n Отправлено из DiMaxWebMessenger (DXMWeb)';
+  }
+
   if (!isStoryReply) {
     actions.clearWebPagePreview({ tabId });
   }
