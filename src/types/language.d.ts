@@ -1782,6 +1782,9 @@ export interface LangPair {
   'StealthModeButtonPremium': undefined;
   'StealthModeButton': undefined;
   'StealthModeButtonToStory': undefined;
+  'WelcomeTitle': undefined;
+  'WelcomeText': undefined;
+  'StartMessaging': undefined;
 }
 
 export interface LangPairWithVariables<V = LangVariable> {

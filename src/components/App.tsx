@@ -205,7 +205,7 @@ const App: FC<StateProps> = ({
       case AppScreens.auth:
         return <Auth />;
       case AppScreens.main:
-        return <Main isMobile={isMobile} />;
+        return <Main isMobile={isMobile} isJustLoggedIn={prevActiveKey === AppScreens.auth} />;
       case AppScreens.lock:
         return <LockScreen isLocked={isScreenLocked} />;
       case AppScreens.inactive:
