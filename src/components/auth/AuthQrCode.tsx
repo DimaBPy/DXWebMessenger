@@ -1,6 +1,6 @@
 import {
   memo, useLayoutEffect, useRef,
-} from '../../lib/teact/teact';
+} from '@teact';
 import { getActions, withGlobal } from '../../global';
 
 import type { GlobalState } from '../../global/types';
@@ -187,7 +187,7 @@ const AuthCode = ({
           </div>
           {!isQrMounted && <div className="qr-loading"><Loading /></div>}
         </div>
-        <h1>{lang('LoginQRTitle')}</h1>
+        <h1>Log in to DiMaxWebMessenger by QR Code</h1>
         <ol>
           <li><span>{lang('LoginQRHelp1')}</span></li>
           <li><span>{lang('LoginQRHelp2', undefined, { withNodes: true, withMarkdown: true })}</span></li>
